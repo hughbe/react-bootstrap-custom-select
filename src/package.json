@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-custom-select",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A custom select React component styled with Bootstrap 4.",
   "main": "./build/index.js",
   "repository": {
@@ -25,11 +25,12 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1"
   },
   "scripts": {
-    "build": "babel lib --presets env,react --out-dir build",
+    "build": "babel lib --presets env,react --plugins transform-object-rest-spread --out-dir build",
     "prepublish": "npm run build"
   }
 }
